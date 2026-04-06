@@ -11,13 +11,12 @@
             --card-bg: #1e293b;
             --text-color: #f8fafc;
             --accent-color: #38bdf8;
-            --button-hover: #0ea5e9;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             display: flex;
@@ -26,11 +25,7 @@
             min-height: 100vh;
         }
 
-        .container {
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
+        .container { width: 90%; max-width: 400px; text-align: center; }
 
         .profile-card {
             background-color: var(--card-bg);
@@ -40,23 +35,31 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Avatarı kesin olarak kontrol altına alan kısım */
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            background: linear-gradient(45deg, var(--accent-color), #818cf8);
             margin: 0 auto 20px;
+            overflow: hidden; /* Dışarı taşmayı engeller */
+            border: 3px solid var(--accent-color);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 40px;
-            color: white;
+            background-color: #334155;
         }
 
-        h1 { margin: 10px 0; font-size: 26px; font-weight: bold; }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 { margin: 10px 0; font-size: 26px; }
         p { color: #94a3b8; margin-bottom: 25px; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
-        .links { display: flex; flex-direction: column; gap: 15px; }
+        .links { display: flex; flex-direction: column; gap: 12px; }
 
         .link-item {
             display: flex;
@@ -68,8 +71,7 @@
             text-decoration: none;
             padding: 14px;
             border-radius: 12px;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            transition: 0.3s;
         }
 
         .link-item:hover {
@@ -77,13 +79,7 @@
             transform: translateY(-3px);
         }
 
-        .link-item i { font-size: 20px; }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: #64748b;
-        }
+        .footer { margin-top: 30px; font-size: 13px; color: #64748b; }
     </style>
 </head>
 <body>
@@ -91,7 +87,7 @@
 <div class="container">
     <div class="profile-card">
         <div class="avatar">
-            <img src="https://avatars.githubusercontent.com/u/108920953?v=4" alt="Kael | Racoon Dev">
+            <img src="https://github.com/Kael1905.png" alt="Kael">
         </div>
         
         <h1>Kael</h1>
@@ -113,7 +109,6 @@
             <a href="https://steamcommunity.com/profiles/76561199477834527/" target="_blank" class="link-item">
                 <i class="fab fa-steam"></i> Steam
             </a>
-        
         </div>
     </div>
 
